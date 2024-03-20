@@ -6,5 +6,6 @@ class TouristReview(models.Model):
     image = models.ImageField(upload_to='static/media/review_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+
     def str(self):
         return f'Review - {self.created_at}'

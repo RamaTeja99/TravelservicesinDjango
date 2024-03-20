@@ -7,3 +7,9 @@ class IntegerDateForm(forms.Form):
 class PieChartForm(forms.Form):
     y_values = forms.CharField(label='Y Values', help_text='Enter comma-separated values')
     labels = forms.CharField(label='Labels', help_text='Enter comma-separated labels')
+from .models import TouristReview
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = TouristReview
+        fields = ['text', 'rating', 'image']
