@@ -1,6 +1,4 @@
 from django.contrib import admin
-from django.conf import settings
-from django.conf.urls.static import static
 from django.urls import path
 from .views import *
 urlpatterns = [
@@ -27,8 +25,4 @@ urlpatterns = [
     path('login1/',login1,name='login1'),
     path('signup1/',signup1,name='signup1'),
     path('logout/',logout,name='logout'),
-    path('tourist-reviews/', review_list, name='review_list'),
-    path('tourist-reviews/add/', add_review, name='add_review'),
 ]
-
-urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
