@@ -137,7 +137,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Feedback
 
-def mainfeedback(request):
+def z(request):
     if request.method == 'POST':
         first_name = request.POST.get('firstname')
         last_name = request.POST.get('lastname')
@@ -151,7 +151,7 @@ def mainfeedback(request):
         send_mail(
             "Thank you for contacting rama travels",
             tosend,
-            '2200030060cseh@gmail.com',
+            '2200032668cseh@gmail.com',
             [email],
             fail_silently=False,
         )
